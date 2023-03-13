@@ -9,6 +9,7 @@ using namespace std;
 #pragma comment(lib,"avformat.lib")
 #pragma comment(lib,"avutil.lib")
 #pragma comment(lib, "avcodec.lib")
+#pragma comment(lib, "swscale.lib")
 
 static double r2d(AVRational r)
 {
@@ -308,7 +309,10 @@ int main(int argc, char* argv[])
 					SWS_BILINEAR,					//尺寸变换的算法
 					0,0,0							//无用参数，全部设为0
 					);
-				cout << "像素格式尺寸转换上下文创建或者获取成功" << endl;
+				/*if (vctx)
+					cout << "像素格式尺寸转换上下文创建或者获取成功" << endl;
+				else
+					cout << "像素格式尺寸转换上下文创建或者获取失败！！！" << endl;*/
 			}
 			
 
